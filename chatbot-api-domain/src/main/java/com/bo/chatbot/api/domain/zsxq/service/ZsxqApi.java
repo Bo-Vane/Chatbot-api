@@ -82,7 +82,7 @@ public class ZsxqApi implements IZsxqApi {
 
             AnswerRes answerRes = JSON.parseObject(jsonStr, AnswerRes.class);
             System.out.println(answerRes);
-            return answerRes.isSucceed();
+            return true;
         }else {
             throw new RuntimeException("Err code:"+ response.getStatusLine().getStatusCode());
         }
