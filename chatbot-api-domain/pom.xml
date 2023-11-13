@@ -49,6 +49,11 @@
             <artifactId>json-lib</artifactId>
             <classifier>jdk15</classifier><!-- jdk版本 -->
         </dependency>
+        <dependency>
+            <groupId>com.auth0</groupId>
+            <artifactId>java-jwt</artifactId>
+        </dependency>
+
 
     </dependencies>
 

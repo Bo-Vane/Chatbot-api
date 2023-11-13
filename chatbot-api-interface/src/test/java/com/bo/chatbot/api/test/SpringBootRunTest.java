@@ -1,6 +1,7 @@
 package com.bo.chatbot.api.test;
 
 import com.alibaba.fastjson.JSON;
+import com.bo.chatbot.api.domain.ai.IOpenAI;
 import com.bo.chatbot.api.domain.zsxq.IZsxqApi;
 import com.bo.chatbot.api.domain.zsxq.aggregates.QuestionAggregates;
 import com.bo.chatbot.api.domain.zsxq.vo.Favorites;
@@ -28,8 +29,12 @@ public class SpringBootRunTest {
     @Value("${chatbot-api.cookie}")
     private String cookie;
 
+
     @Resource
     private IZsxqApi zsxqApi;
+
+    @Resource
+    private IOpenAI openAI;
 
     @Test
     public void test_zsxqApi() throws IOException {
@@ -49,6 +54,13 @@ public class SpringBootRunTest {
             //回答问题
             logger.info("测试结果：{}",zsxqApi.answer(groupId,cookie,topicId,text));
         }
+
+    }
+
+    @Test
+    public void test_openAI() throws IOException{
+        String question = "请帮我写一个java冒泡排序";
+        logger.info("测试结果：{}",openAI.doChatGLM(question));
 
     }
 }
