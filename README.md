@@ -1,6 +1,6 @@
 # ChatGPT(glm) AI问答项目
 
-**《ChatGPT AI 问答助手》** 开源项目，涵盖爬虫接口、ChatGPT API对接、DDD架构设计、镜像打包、Docker容器部署，小巧精悍，流程全面。对于Java编程伙伴来说，非常具有学习价值。
+**《ChatGPT（glm） AI 问答助手》** 开源项目，涵盖爬虫接口、ChatGPT API对接、DDD架构设计、镜像打包、Docker容器部署，小巧精悍，流程全面。对于Java编程伙伴来说，非常具有学习价值。
 
 技术栈：Java、SpringBoot、爬虫、ChatGPT、job、Docker
 
