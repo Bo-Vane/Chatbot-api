@@ -40,8 +40,10 @@ public class ChatbotSchedule {
     @Resource
     private IOpenAI openAI;
 
+
+
     //一分钟轮询一次，表达式网站：cron.qqe2.com
-    @Scheduled(cron = "0 0/1 * * * ?")
+    @Scheduled(cron = "0 0/1 * * * * ? ")
     public void run(){
         //防止规律轮询
         try{
